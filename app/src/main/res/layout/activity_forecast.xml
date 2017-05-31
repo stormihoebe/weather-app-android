@@ -10,10 +10,10 @@
     tools:context="com.example.guest.weatherapp.ForecastActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/bannerTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Forecast for LOCATION"
+        android:text="@string/banner"
         tools:layout_editor_absoluteX="118dp"
         tools:layout_editor_absoluteY="28dp"
         android:layout_alignParentTop="true"
@@ -21,11 +21,11 @@
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/forecastRecyclerView"
-        android:layout_below="@+id/textView3"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bannerTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="29dp" />
+        android:layout_marginTop="14dp" />
 
 </RelativeLayout>

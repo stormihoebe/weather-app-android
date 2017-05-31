@@ -27,9 +27,6 @@ public class OpenWeatherService {
 
         OkHttpClient client = new OkHttpClient.Builder().build();
 
-        Log.d("Constants Zip", Constants.BASE_URL);
-        Log.d("Constants Zip", Constants.PARAM);
-        Log.d("Constants Zip", Constants.OPEN_WEATHER_KEY);
         HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.BASE_URL).newBuilder();
         urlBuilder.addQueryParameter(Constants.ZIP, location);
         urlBuilder.addQueryParameter(Constants.PARAM, Constants.OPEN_WEATHER_KEY);
