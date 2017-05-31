@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.guest.weatherapp.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/pineapple"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expect the Best"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginTop="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prepare for the Worst"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="65dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/locationEditText"
+        android:layout_width="178dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Enter Zip Code"
+        android:textAlignment="center"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="159dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/getWeatherButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="5dp"
+        android:text="  Get Weather  "
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="153dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/locationEditText"
+        android:layout_toEndOf="@+id/locationEditText" />
+
+
+
+
+</RelativeLayout>
