@@ -5,7 +5,11 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
 
+import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -41,13 +45,26 @@ public class OpenWeatherService {
         call.enqueue(callback);
     }
 
-    public Weather processResults(Response response){
+    public ArrayList<Weather> processResults(Response response) {
+        ArrayList<Weather> weather = new ArrayList<>();
         try {
             String jsonData = response.body().string();
-            if (response.isSuccessful()){
+            if (response.isSuccessful()) {
                 JSONObject weatherJson = new JSONObject(jsonData);
-                String description =
+                String description = weatherJson.getJSONArray("weather").getJSONObject(0).getString("description");
+                String main = weatherJson.getJSONArray("weather").getJSONObject(0).getString("main");
+                double temp = weatherJson.getJSONObject("main").getDouble("temp");
+                double min = weatherJson.getJSONObject("main").getDouble("temp_min");
+                double max = weatherJson.getJSONObject("main").getDouble("temp_max");
+                String city = weatherJson.getString("name");
+                Weather instanceOf = new Weather(description, temp, main, max, min, city);
+                weather.add(instanceOf);
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
+        return weather;
     }
 }

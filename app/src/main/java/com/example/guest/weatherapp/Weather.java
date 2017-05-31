@@ -6,13 +6,13 @@ package com.example.guest.weatherapp;
 
 public class Weather {
     private String mDescription;
-    private Integer mTemperature;
+    private Double mTemperature;
     private String mMain;
-    private Integer mMaxTemp;
-    private Integer mMinTemp;
+    private Double mMaxTemp;
+    private Double mMinTemp;
     private String mCityName;
 
-    public Weather(String description, Integer temperature, String main, Integer max, Integer min, String city){
+    public Weather(String description, Double temperature, String main, Double max, Double min, String city){
         this.mDescription = description;
         this.mTemperature = temperature;
         this.mMain = main;
@@ -25,7 +25,7 @@ public class Weather {
         return mDescription;
     }
 
-    public Integer getTemperature(){
+    public Double getTemperature(){
         return mTemperature;
     }
 
@@ -33,11 +33,11 @@ public class Weather {
         return mMain;
     }
 
-    public Integer getMax(){
+    public Double getMax(){
         return mMaxTemp;
     }
 
-    public Integer getMin(){
+    public Double getMin(){
         return mMinTemp;
     }
 
