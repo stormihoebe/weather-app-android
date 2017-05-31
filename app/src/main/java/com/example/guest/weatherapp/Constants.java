@@ -6,13 +6,7 @@ package com.example.guest.weatherapp;
 
 public class Constants {
     public static final String OPEN_WEATHER_KEY = BuildConfig.OPEN_WEATHER_KEY;
-    public static final String BASE_URL = "api.openweathermap.org/data/2.5/weather?";
+    public static final String BASE_URL = "http://api.openweathermap.org/data/2.5/weather?";
     public static final String ZIP = "zip";
-    public static final String PARAM = "APPID=";
-
-
-
-
-
-
+    public static final String PARAM = "APPID";
 }
