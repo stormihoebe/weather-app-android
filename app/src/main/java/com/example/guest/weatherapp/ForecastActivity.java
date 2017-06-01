@@ -22,7 +22,7 @@ import okhttp3.Response;
 public class ForecastActivity extends AppCompatActivity {
     public static final String TAG = ForecastActivity.class.getSimpleName();
     @Bind(R.id.bannerTextView) TextView mBanner;
-    @Bind(R.id.forecastRecyclerView) ListView mForcastListView;
+    @Bind(R.id.forecastRecyclerView) RecyclerView mForcastListView;
     private WeatherListAdapter mAdapter;
 
     public ArrayList<Weather> mWeathers = new ArrayList<>();
@@ -57,7 +57,7 @@ public class ForecastActivity extends AppCompatActivity {
                         mAdapter = new WeatherListAdapter(getApplicationContext(), mWeathers);
                         mForcastListView.setAdapter(mAdapter);
                         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ForecastActivity.this);
-                        mForcastListView.setLayoutManger(layoutManager);
+                        mForcastListView.setLayoutManager(layoutManager);
                         mForcastListView.setHasFixedSize(true);
                     }
                 });

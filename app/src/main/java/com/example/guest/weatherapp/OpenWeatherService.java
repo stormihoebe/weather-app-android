@@ -30,6 +30,7 @@ public class OpenWeatherService {
         HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.BASE_URL).newBuilder();
         urlBuilder.addQueryParameter(Constants.ZIP, location);
         urlBuilder.addQueryParameter(Constants.PARAM, Constants.OPEN_WEATHER_KEY);
+        urlBuilder.addQueryParameter(Constants.QUERY_UNITS, Constants.IMPERIAL);
         String url = urlBuilder.build().toString();
 
         Log.d("url", url);

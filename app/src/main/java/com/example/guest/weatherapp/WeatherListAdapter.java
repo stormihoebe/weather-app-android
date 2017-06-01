@@ -58,8 +58,8 @@ public class WeatherListAdapter extends RecyclerView.Adapter<WeatherListAdapter.
         public void bindWeather(Weather weather){
             mCity.setText(weather.getCity());
             mDescription.setText(weather.getDescription());
-            mTemp.setText(weather.getTemperature().toString());
-            mHighLow.setText("high: " + weather.getMax() + " C / low: " + weather.getMin() +" C");
+            mTemp.setText(weather.getTemperature().toString() + " F");
+            mHighLow.setText("high: " + weather.getMax().toString() + " F / low: " + weather.getMin().toString() +" F");
             mMain.setText(weather.getMain());
         }
     }

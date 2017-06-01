@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">WeatherApp</string>
-    <string name="banner">Weather Banner</string>
+    <string name="banner">Today\'s Weather</string>
 </resources>
